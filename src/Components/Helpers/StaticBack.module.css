@@ -1,0 +1,55 @@
+.BG{
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.Blur{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: rgba(255,255,255, .3);
+    backdrop-filter: blur(5px);
+    opacity: 1;
+    top: 0;
+}
+
+.Blob1,.Blob2{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(136deg,var(--light-blue),var(--medium-blue),var(--black-blue))  ;
+    animation: Blob 20s infinite alternate;
+}
+.Blob1{
+    left: -200px;
+    top:-200px
+}
+.Blob2{
+    right:-80%;
+    bottom:100px
+}
+@keyframes Blob {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      }
+}
+
+@media (max-width:800px) {
+    .Blob1{
+        left: -300px;
+
+    }
+    .Blob2{
+        right:  -70%;
+        bottom: 200px;
+    }
+}

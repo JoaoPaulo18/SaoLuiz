@@ -1,0 +1,122 @@
+.Hero{
+    height: 90vh;
+    background: url('../../assets/Onibus_teste.jpg') center center;
+    background-size: cover;
+    
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.wrapper{
+    display: grid;
+    grid-template-rows: auto max-content;
+    gap: 1rem;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    align-self: center;
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+}
+.container .bg{
+    display: grid;
+    position: relative;
+    z-index: 10;
+}
+.container .mask{
+    pointer-events: none;
+    grid-area: 1/1;
+    line-height: 7rem;
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: var(--Oswald);
+    width: 10ch;
+    text-align: center;
+    color: red;
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    	-webkit-background-clip: text;  
+    background: linear-gradient(110deg,white 15%,transparent 10%,transparent,transparent)  ;
+    background-clip: text;
+    animation: Bg1 3s infinite;
+}
+.container .default{
+    grid-area: 1/1;
+    line-height: 7rem;
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: var(--Oswald);
+    width: 10ch;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;  
+    background: linear-gradient(136deg,var(--light-blue),var(--medium-blue),var(--black-blue))  ;
+    background-clip: text;
+}
+
+@keyframes Bg1 {
+    0%,10%,20%,40%,50%,60%{
+        background-position: 0;
+
+    }
+    to{
+        background-position: 480px;
+    }
+}
+
+.buttons{
+    display: flex;
+    gap: 1.5rem;
+}
+ .Sobre{
+    padding-bottom: 1rem;
+     align-self: end;
+     text-align: center;
+ }
+.Sobre h3{
+    color: white;
+    font-family: var(--Sen);
+    font-weight: 400;
+}
+
+@media (max-width:550px) {
+    .container .mask,.container .default{
+        font-size: 4rem;
+        line-height: 5rem;
+        }
+        @keyframes Bg1 {
+            0%,10%,20%,40%,50%,60%{
+                background-position: 0;
+        
+            }
+            to{
+                background-position: 340px;
+            }
+        }
+}   
+
+@media (max-width:300px){
+    .container .mask,.container .default{
+        font-size: 3rem;
+        line-height: 3.8rem;
+        }
+        @keyframes Bg1 {
+            0%,10%,20%,40%,50%,60%{
+                background-position: 0;
+        
+            }
+            to{
+                background-position: 240px;
+            }
+        }
+
+        .buttons button{
+            font-size: 1rem;
+        }
+}

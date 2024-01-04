@@ -1,0 +1,68 @@
+:root {
+  --black-blue: #0000f0;
+  --medium-blue: #00afef;
+  --light-blue: #ade9ff;
+  --Sen: 'Sen', sans-serif;
+  --Roboto: 'Roboto', sans-serif;
+  --Oswald:'Oswald', sans-serif;
+  --Fira: 'Fira Sans', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  height: 100vh;
+  overflow-x: hidden;
+
+}
+main{
+  padding-top: 5.25rem;
+}
+.container{
+  padding:  1rem ;
+  max-width: 1200px;
+  opacity: 0;
+  transform: translateX(-50px);
+  margin: 1rem auto;
+  display: grid;
+  animation: fade .1s forwards;
+  animation-timeline: view(700px 100px);
+  
+}
+.apper{
+  animation: Blur 1s ease forwards;
+    opacity: 0;
+}
+@keyframes Blur {
+  to{
+      opacity: 1;
+  }
+}
+@keyframes fade {
+
+  to{
+    transform: translateX(0);
+      opacity: 1;
+  }
+}
+img{
+  max-width: 100%;
+}
+/*
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/

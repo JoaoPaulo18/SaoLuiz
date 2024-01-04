@@ -1,0 +1,29 @@
+.btn{
+    display: block;
+    font-family: var(--Roboto);
+    padding: .5rem 1.5rem;
+     border-radius: 30px;
+     font-size: 1.15rem;
+     cursor: pointer;
+     transition: .3s ease;
+}
+:global(.Full){
+    color: white;
+    background: var( --medium-blue);
+    border: 2px solid var(--medium-blue);
+}
+:global(.Skinnie){
+    background: transparent;
+    border: 2px solid var(--medium-blue);
+    color: var(--medium-blue);
+}
+
+:global(.Full):is(:hover,:focus), :global(.Full)[active="true"]{
+    background: transparent;
+    color: var(--medium-blue);
+}
+
+:global(.Skinnie):is(:hover,:focus){
+    color: white;
+    background: var( --medium-blue);
+}

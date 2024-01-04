@@ -1,0 +1,70 @@
+
+.buttons{
+    display: flex;
+    gap: 2rem ;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    max-width: 950px;
+    margin: 0 auto 3rem auto;
+    justify-content: center;
+}
+
+.textContainer{
+    background: white;
+    border-radius: 12px;   
+    padding: 2rem 3rem;
+    border: 3px solid var(--medium-blue);
+    justify-self: center;
+    max-width: 950px;
+}
+
+
+.textContainer h2{
+    font-size: 2rem;
+    font-family: var(--Roboto);
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 1.5rem;
+}
+.textContainer p {
+    font-family: var(--Sen);
+    font-weight: 100;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.Slide{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: Show .3s ease forwards;
+}
+
+@keyframes Show {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:500px) {
+    .buttons{
+        gap: 1rem;
+
+    }
+    .buttons button{
+        font-size: .8rem;
+    }
+
+    .textContainer h2{
+        font-size: 1.5rem;
+    }
+    .textContainer p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:320px) {
+    .textContainer{
+        padding: 2rem 1.5rem;
+    }
+}
